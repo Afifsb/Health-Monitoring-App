@@ -1,0 +1,79 @@
+.bmi-container {
+  max-width: 350px;
+  margin: 0 auto;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #f9f9f9;
+}
+
+.bmi-heading {
+  text-align: center;
+  margin-bottom: 20px;
+  background-color: aqua;
+  font-weight: bolder;
+  font-size: larger;
+}
+
+.bmi-input-Container {
+  margin-bottom: 15px;
+}
+
+.bmi-label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+.bmi-input {
+  width: calc(100% - 10px);
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+}
+
+.bmi-button {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin-top: 10px;
+}
+
+.bmi-button:hover {
+  background-color: #0056b3;
+}
+
+.bmi-entries {
+  margin-top: 20px;
+}
+
+.bmi-entry {
+  margin-bottom: 15px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  background-color: #fff;
+}
+
+.bmi-entry p {
+  margin: 5px 0;
+}
+
+.bmi-entry button {
+  padding: 5px 10px;
+  background-color: #dc3545;
+  color: #fff;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.bmi-entry button:hover {
+  background-color: #c82333;
+}

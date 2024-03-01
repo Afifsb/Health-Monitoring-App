@@ -1,0 +1,98 @@
+/* App container */
+body, html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+
+#root {
+  height: 100%;
+}
+
+/* Login, Register, Dashboard, BMI, BloodPressure, Diabetes components */
+.container {
+  max-width: 400px; /* Adjust as needed */
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.input-group {
+  margin-bottom: 15px;
+}
+
+.input-group label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+.input-group input {
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.btn {
+  display: inline-block;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  color: #fff;
+  background-color: #007bff;
+  border: none;
+  border-radius: 4px;
+  text-decoration: none;
+}
+
+.btn:hover {
+  background-color: #0056b3;
+}
+
+/* Dashboard specific styles */
+.dashboard {
+  display: flex;
+  justify-content: space-between;
+}
+
+.card {
+  flex-basis: 30%; /* Adjust as needed */
+  padding: 20px;
+  margin-bottom: 20px;
+  background-color: #f8f9fa;
+  border: 1px solid #dee2e6;
+  border-radius: 4px;
+}
+
+.card h2 {
+  margin-bottom: 10px;
+}
+
+/* BMI, BloodPressure, Diabetes specific styles */
+.measurement {
+  margin-bottom: 20px;
+}
+
+.measurement h2 {
+  margin-bottom: 10px;
+}
+
+.measurement table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.measurement th, .measurement td {
+  padding: 10px;
+  border: 1px solid #dee2e6;
+}
+
+.measurement th {
+  background-color: #f8f9fa;
+  font-weight: bold;
+  text-align: left;
+}
