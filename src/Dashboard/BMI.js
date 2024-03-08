@@ -154,7 +154,7 @@ const BMI = () => {
             </div>
           ))}
         </div>
-        <Button onClick={toggleHeightUnit}>Toggle Height Unit</Button>
+        <Button onClick={toggleHeightUnit}>Change Height Unit</Button>
         <Link to="/dashboard">
           <Button variant="secondary" className="go-back-button">Go back to Dashboard</Button>
         </Link>
