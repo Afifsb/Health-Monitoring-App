@@ -1,6 +1,6 @@
 .diabetes-container {
-  max-width: 350px;
-  margin: 0 auto;
+  max-width: 100%;
+  height: 100vh; /* Set height to viewport height */
   padding: 20px;
   border: 1px solid #ccc;
   border-radius: 5px;
@@ -15,7 +15,7 @@
   font-size: larger;
 }
 
-.diabetes-input-Container {
+.diabetes-input-container {
   margin-bottom: 15px;
 }
 
@@ -24,8 +24,8 @@
   margin-bottom: 5px;
 }
 
-.diabetes-input{
-  width: calc(100% - 10px);
+.diabetes-input {
+  width: 10%;
   padding: 8px;
   border: 1px solid #ccc;
   border-radius: 3px;
@@ -33,7 +33,7 @@
 
 .diabetes-button {
   display: block;
-  width: 100%;
+  width: 10%;
   padding: 10px;
   background-color: #007bff;
   color: #fff;
@@ -48,7 +48,7 @@
   background-color: #0056b3;
 }
 
-.entries {
+.diabetes-entries {
   margin-top: 20px;
 }
 
@@ -76,4 +76,11 @@
 
 .diabetes-entry button:hover {
   background-color: #c82333;
+}
+
+/* Set background image to cover the full screen */
+.diabetes-container {
+  background-image: url('../Images/background.jpg');
+  background-size: cover;
+  background-position: center;
 }

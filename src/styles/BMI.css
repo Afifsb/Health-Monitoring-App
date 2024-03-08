@@ -1,79 +1,108 @@
+/* General styles */
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f0f0f0;
+}
+
 .bmi-container {
-  max-width: 350px;
-  margin: 0 auto;
-  padding: 20px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-  background-color: #f9f9f9;
+  margin-top: 50px;
+  padding: 30px;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 .bmi-heading {
   text-align: center;
-  margin-bottom: 20px;
-  background-color: aqua;
-  font-weight: bolder;
-  font-size: larger;
+  color: #333;
+  margin-bottom: 30px;
 }
 
-.bmi-input-Container {
-  margin-bottom: 15px;
+.bmi-ranges {
+  margin-bottom: 20px;
+  padding: 10px;
+  background-color: #f5f5f5;
+  border-radius: 5px;
+}
+
+.bmi-ranges p {
+  margin: 5px 0;
+}
+
+/* Form styles */
+.bmi-input-container {
+  margin-bottom: 20px;
 }
 
 .bmi-label {
   display: block;
+  font-weight: bold;
   margin-bottom: 5px;
 }
 
 .bmi-input {
-  width: calc(100% - 10px);
+  width: 100%;
   padding: 8px;
   border: 1px solid #ccc;
-  border-radius: 3px;
+  border-radius: 4px;
 }
 
 .bmi-button {
-  display: block;
-  width: 100%;
-  padding: 10px;
   background-color: #007bff;
   color: #fff;
   border: none;
-  border-radius: 3px;
+  padding: 10px 20px;
+  border-radius: 4px;
   cursor: pointer;
   transition: background-color 0.3s ease;
-  margin-top: 10px;
 }
 
 .bmi-button:hover {
   background-color: #0056b3;
 }
 
-.bmi-entries {
+/* Result styles */
+.bmi-result {
   margin-top: 20px;
+  padding: 10px;
+  background-color: #f5f5f5;
+  border-radius: 5px;
+  text-align: center;
+}
+
+/* User data styles */
+.bmi-user-data {
+  margin-top: 30px;
 }
 
 .bmi-entry {
-  margin-bottom: 15px;
-  padding: 10px;
-  border: 1px solid #ccc;
-  border-radius: 3px;
-  background-color: #fff;
+  padding: 15px;
+  background-color: #f5f5f5;
+  border-radius: 5px;
+  margin-bottom: 10px;
 }
 
 .bmi-entry p {
   margin: 5px 0;
 }
 
-.bmi-entry button {
-  padding: 5px 10px;
-  background-color: #dc3545;
+/* Toggle button styles */
+.toggle-button {
+  margin-top: 20px;
+  background-color: #28a745;
   color: #fff;
   border: none;
-  border-radius: 3px;
+  padding: 10px 20px;
+  border-radius: 4px;
   cursor: pointer;
   transition: background-color 0.3s ease;
 }
 
-.bmi-entry button:hover {
-  background-color: #c82333;
+.toggle-button:hover {
+  background-color: #1e7e34;
+}
+
+/* Go back button styles */
+.go-back-button {
+  margin-top: 20px;
 }

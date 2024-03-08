@@ -1,8 +1,9 @@
 .dashboard-container {
   position: relative;
   width: 100%;
-  height: 100vh;
-  
+  height: 100vh; 
+  display: flex; 
+  flex-direction: column; 
 }
 
 .background-image {
@@ -18,21 +19,19 @@
 .dashboard-content {
   position: relative;
   z-index: 1;
-  padding: 20px;
   text-align: center;
+  flex: 1; 
 }
 
 .app-title {
   color: #fff;
-  margin-bottom: 20px;
+  margin-bottom: 20px; 
 }
 
 .logo {
-  position: absolute;
-  top: 20px; 
-  left: 20px; 
   width: 100px;
   height: 100px;
+  margin: 20px auto; 
 }
 
 .dashboard-components {
@@ -41,26 +40,53 @@
   justify-content: center;
 }
 
-.dashboard-component {
-  background-color: rgba(255, 255, 255, 0.9);
-  border-radius: 10px;
+.dashboard-half {
+  flex: 1;
   padding: 20px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  margin: 10px; 
-  max-width: 250px; 
-  flex: 1 1 auto; 
 }
-.app-title{
-  font-size: xx-large;
-  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-  color: aqua;
+
+.welcome-page {
+  background-color: rgba(255, 255, 255, 0.9); 
+  padding: 20px; 
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); 
+  margin-top: 20px; 
+  height: auto; 
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.welcome-page p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: black; 
+  margin-bottom: 15px;
+}
+
+.button-container {
+  background-color: rgba(255, 255, 255, 0.9); 
+  padding: 75px; 
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); 
+  margin-top: 20px; 
+  height: auto; 
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.button-container .btn {
+  margin-bottom: 20px; /* Add margin below each button */
+  padding: 15px 30px; /* Increase padding to make the buttons larger */
+  font-size: 1.5rem; /* Increase font size */
 }
 
 .footer {
   text-align: center;
+  margin-top: auto; /* Align footer at the bottom */
 }
 
-.footer .copyright {
-  margin: 0;
+.footer p {
+  margin: 10px 0; /* Adjust margin */
 }
-
