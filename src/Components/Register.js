@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import axios from "axios";
+import '../styles/Register.css'
 
 const Register = () => {
   const navigate = useNavigate();
@@ -22,7 +23,7 @@ const Register = () => {
         alert("User already exists");
       } else if (response.data === "Register successfully") {
         alert("Register successfully");
-        navigate("/login");
+        navigate("/");
       } else {
         alert("Registration failed. Please try again.");
       }

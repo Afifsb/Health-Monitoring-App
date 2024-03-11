@@ -1,0 +1,67 @@
+/* BMIPrecaution.css, BloodPressurePrecaution.css, DiabetesPrecaution.css */
+
+.precautions-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #f7f7f7;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .precautions-container h2 {
+    color: #333;
+    font-size: 24px;
+    margin-bottom: 16px;
+    text-align: center;
+  }
+  
+  .precautions-container p {
+    color: #555;
+    font-size: 16px;
+    line-height: 1.6;
+    margin-bottom: 12px;
+  }
+  
+  .precautions-container ul {
+    list-style-type: none;
+    padding: 0;
+    margin-bottom: 16px;
+  }
+  
+  .precautions-container li {
+    color: #666;
+    font-size: 14px;
+    line-height: 1.4;
+    margin-bottom: 8px;
+    padding-left: 24px;
+    position: relative;
+  }
+  
+  .precautions-container li::before {
+    content: "\2022";
+    color: #4287f5;
+    font-size: 18px;
+    position: absolute;
+    left: 0;
+    top: 0;
+  }
+  
+  .precautions-container button {
+    display: block;
+    margin: 0 auto;
+    background-color: #4caf50;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    padding: 8px 16px;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .precautions-container button:hover {
+    background-color: #45a049;
+  }

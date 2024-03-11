@@ -10,6 +10,7 @@ const BMI = () => {
   const [height, setHeight] = useState('');
   const [result, setResult] = useState('');
   const [userData, setUserData] = useState([]);
+  const [results, setResults] = useState([]);
   const [heightUnit, setHeightUnit] = useState('cm');
 
   const calculateBMI = (e) => {
@@ -21,7 +22,7 @@ const BMI = () => {
     }
 
     const weightInKg = parseFloat(weight);
-    const heightInCm = parseFloat(height);
+    const heightInCm = parseFloat(convertToCentimeters(height));
 
     const heightInM = heightInCm / 100;
     const bmiValue = weightInKg / (heightInM * heightInM);
@@ -37,28 +38,30 @@ const BMI = () => {
       bmiCategory = 'Obesity';
     }
 
-    setResult(bmiCategory);
-    setTimeout(() => {
-      setResult('');
-    }, 0); // Clear the result immediately
+    setResult({ value: bmiValue.toFixed(2), category: bmiCategory });
 
     const userDataEntry = {
       name: name,
       age: age,
       weight: weightInKg,
-      height: heightInCm,
-      result: bmiCategory
+      height: heightInCm
     };
 
+    const resultObject = { value: bmiValue.toFixed(2), category: bmiCategory };
+
     setUserData([...userData, userDataEntry]);
+    setResults([...results, resultObject]);
 
     clearInputs();
   };
 
   const deleteEntry = (index) => {
     const newData = [...userData];
+    const newResults = [...results];
     newData.splice(index, 1);
+    newResults.splice(index, 1);
     setUserData(newData);
+    setResults(newResults);
   };
 
   const clearInputs = () => {
@@ -66,6 +69,11 @@ const BMI = () => {
     setAge('');
     setWeight('');
     setHeight('');
+    clearResult();
+  };
+
+  const clearResult = () => {
+    setResult('');
   };
 
   const toggleHeightUnit = () => {
@@ -77,16 +85,37 @@ const BMI = () => {
       return `${heightInCm} cm`;
     } else {
       const feet = Math.floor(heightInCm / 30.48);
-      const inches = Math.round((heightInCm % 30.48) / 2.54);
-      return `${feet}ft ${inches}in`;
+      const inches = ((heightInCm % 30.48) / 2.54).toFixed(2);
+      return `${feet}'${inches}`;
     }
   };
 
   const convertToCentimeters = (height) => {
     if (heightUnit === 'feet') {
-      const [feet, inches] = height.split('ft ');
-      const heightInCm = parseInt(feet) * 30.48 + parseInt(inches) * 2.54;
-      return heightInCm.toString();
+      if (height.includes("'")) {
+        const [feet, inches] = height.split("'");
+        const heightInCm = (parseFloat(feet) * 30.48) + (parseFloat(inches) * 2.54);
+        return isNaN(heightInCm) ? '' : heightInCm.toString();
+      } else {
+        // If the input is a single number, assume it's in feet
+        const heightInFeet = parseFloat(height);
+        const heightInCm = heightInFeet * 30.48;
+        return heightInCm.toString();
+      }
+    }
+    return height;
+  };
+
+  const formatHeightInput = (height) => {
+    if (heightUnit === 'feet') {
+      if (height.includes("'")) {
+        return height;
+      } else {
+        const heightInFeet = parseFloat(height) / 30.48;
+        const feet = Math.floor(heightInFeet);
+        const inches = ((heightInFeet % 1) * 12).toFixed(2);
+        return `${feet}'${inches}`;
+      }
     }
     return height;
   };
@@ -128,9 +157,10 @@ const BMI = () => {
                 <label className="bmi-label">Height (in {heightUnit}):</label>
                 <input
                   className="bmi-input"
-                  type="number"
-                  value={convertToCentimeters(height)}
+                  type="text"
+                  value={formatHeightInput(height)}
                   onChange={(e) => setHeight(e.target.value)}
+                  min={0}
                 />
               </div>
             </Col>
@@ -139,7 +169,8 @@ const BMI = () => {
         </form>
         {result && (
           <div className="bmi-result">
-            <p>BMI Category: {result}</p>
+            <p>Numerical Result: {result.value}</p>
+            <p>BMI Category: {result.category}</p>
           </div>
         )}
         <div className="bmi-user-data">
@@ -149,7 +180,8 @@ const BMI = () => {
               <p>Age: {entry.age}</p>
               <p>Weight: {entry.weight} kg</p>
               <p>Height: {convertToFeetInches(entry.height)}</p>
-              <p>BMI Category: {entry.result}</p>
+              <p>Numerical Result: {results[index]?.value}</p>
+              <p>BMI Category: {results[index]?.category}</p>
               <Button onClick={() => deleteEntry(index)}>Delete</Button>
             </div>
           ))}

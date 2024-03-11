@@ -1,57 +1,66 @@
-/* General styles */
+/* General Styles */
 body {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  background-color: #f0f0f0;
+  background-color: #f8f8f8;
 }
 
+/* BMI Container */
 .bmi-container {
-  margin-top: 50px;
-  padding: 30px;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 2rem;
   background-color: #fff;
-  border-radius: 10px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
 }
 
+/* BMI Heading */
 .bmi-heading {
   text-align: center;
   color: #333;
-  margin-bottom: 30px;
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
 }
 
+/* BMI Ranges */
 .bmi-ranges {
-  margin-bottom: 20px;
-  padding: 10px;
-  background-color: #f5f5f5;
-  border-radius: 5px;
+  margin-bottom: 2rem;
+  padding: 1rem;
+  background-color: #f0f0f0;
+  border-radius: 8px;
 }
 
 .bmi-ranges p {
-  margin: 5px 0;
+  margin: 0.5rem 0;
+  color: #555;
 }
 
-/* Form styles */
-.bmi-input-container {
-  margin-bottom: 20px;
+/* BMI Form */
+.bmi-input-Container {
+  margin-bottom: 1rem;
 }
 
 .bmi-label {
   display: block;
   font-weight: bold;
-  margin-bottom: 5px;
+  color: #333;
+  margin-bottom: 0.5rem;
 }
 
 .bmi-input {
   width: 100%;
-  padding: 8px;
-  border: 1px solid #ccc;
+  padding: 0.5rem;
   border-radius: 4px;
+  border: 1px solid #ccc;
+  font-size: 1rem;
 }
 
 .bmi-button {
   background-color: #007bff;
   color: #fff;
   border: none;
-  padding: 10px 20px;
+  padding: 0.8rem 1.5rem;
+  font-size: 1.2rem;
   border-radius: 4px;
   cursor: pointer;
   transition: background-color 0.3s ease;
@@ -61,48 +70,78 @@ body {
   background-color: #0056b3;
 }
 
-/* Result styles */
+
 .bmi-result {
-  margin-top: 20px;
-  padding: 10px;
-  background-color: #f5f5f5;
-  border-radius: 5px;
-  text-align: center;
+  margin-top: 2rem;
+  padding: 1rem;
+  background-color: #f0f0f0;
+  border-radius: 8px;
+  font-weight: bold;
+  color: #333;
 }
 
-/* User data styles */
+
 .bmi-user-data {
-  margin-top: 30px;
+  margin-top: 2rem;
 }
 
 .bmi-entry {
-  padding: 15px;
-  background-color: #f5f5f5;
-  border-radius: 5px;
-  margin-bottom: 10px;
+  padding: 1rem;
+  background-color: #f0f0f0;
+  border-radius: 8px;
+  margin-bottom: 1rem;
 }
 
 .bmi-entry p {
-  margin: 5px 0;
+  margin: 0.5rem 0;
+  color: #555;
 }
 
-/* Toggle button styles */
-.toggle-button {
-  margin-top: 20px;
-  background-color: #28a745;
+.bmi-entry button {
+  background-color: #dc3545;
   color: #fff;
   border: none;
-  padding: 10px 20px;
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
   border-radius: 4px;
   cursor: pointer;
   transition: background-color 0.3s ease;
 }
 
-.toggle-button:hover {
-  background-color: #1e7e34;
+.bmi-entry button:hover {
+  background-color: #c82333;
 }
 
-/* Go back button styles */
+
 .go-back-button {
-  margin-top: 20px;
+  margin-top: 2rem;
+  background-color: #6c757d;
+  color: #fff;
+  border: none;
+  padding: 0.8rem 1.5rem;
+  font-size: 1.2rem;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.go-back-button:hover {
+  background-color: #5a6268;
+}
+
+
+.bmi-toggle-button {
+  margin-top: 1rem;
+  background-color: #6c757d;
+  color: #fff;
+  border: none;
+  padding: 0.8rem 1.5rem;
+  font-size: 1.2rem;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.bmi-toggle-button:hover {
+  background-color: #5a6268;
 }

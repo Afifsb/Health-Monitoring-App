@@ -11,7 +11,7 @@ body, html {
 
 /* Login, Register, Dashboard, BMI, BloodPressure, Diabetes components */
 .container {
-  max-width: 400px; /* Adjust as needed */
+  max-width: 400px; 
   margin: 0 auto;
   padding: 20px;
 }
