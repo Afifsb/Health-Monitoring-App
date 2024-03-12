@@ -2,55 +2,63 @@ const express = require("express");
 const app = express();
 const cors = require("cors");
 const mongoose = require("mongoose");
+const registerApi = require("./handlers/registerAPI");
+const loginApi = require("./handlers/loginAPI");
 
 app.use(express.json());
 app.use(cors());
 
-const Collection = require("./mongo");
+// const Collection = require("./mongo");
 
-app.post("/register", async (req, res) => {
-  const { fullName, email, password } = req.body;
 
-  try {
-    const existingUser = await Collection.findOne({ email });
-    if (existingUser) {
-      return res.json("exist");
-    }
+ app.post("/register" , registerApi)
+ app.post("login", loginApi)
 
-    const newUser = new Collection({
-      fullName,
-      email,
-      password,
-    });
+// app.post("/register", async (req, res) =>{
+//   const { fullName, email, password } = req.body;
 
-    await newUser.save();
-    res.json("Register successfully");
-  } catch (error) {
-    console.error("Registration error:", error);
-    res.json("fail");
-  }
-});
+//   try {
+//     const existingUser = await Collection.findOne({ email });
+//     if (existingUser) {
+//       return res.json("exist");
+//     }
 
-app.post("/login", async (req, res) => {
-  const { email, password } = req.body;
+//     const newUser = new Collection({
+//       fullName,
+//       email,
+//       password,
+//     });
 
-  try {
-    const user = await Collection.findOne({ email });
+//     await newUser.save();
+//     res.json("Register successfully");
+//   } catch (error) {
+//     console.error("Registration error:", error);
+//     res.json("fail");
+//   }
+// });
 
-    if (!user) {
-      return res.json("notexist");
-    }
+// app.post("/login", loginApi)
 
-    if (user.password !== password) {
-      return res.json("fail");
-    }
+// app.post("/login", async (req, res) => {
+//   const { email, password } = req.body;
 
-    res.json("success");
-  } catch (error) {
-    console.error("Login error:", error);
-    res.json("fail");
-  }
-});
+//   try {
+//     const user = await Collection.findOne({ email });
+
+//     if (!user) {
+//       return res.json("notexist");
+//     }
+
+//     if (user.password !== password) {
+//       return res.json("fail");
+//     }
+
+//     res.json("success");
+//   } catch (error) {
+//     console.error("Login error:", error);
+//     res.json("fail");
+//   }
+// });
 
 const PORT = process.env.PORT || 8000;
 
