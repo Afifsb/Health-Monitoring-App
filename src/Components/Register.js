@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import axios from "axios";
-import '../styles/Register.css'
-
+import '../styles/Register.css';
+import backgroundImage from '../Images/login_img.jpeg'; 
 const Register = () => {
   const navigate = useNavigate();
   const [fullName, setFullName] = useState("");
@@ -34,35 +34,37 @@ const Register = () => {
   };
 
   return (
-    <div className="register-container">
-      <h2>Register</h2>
-      <form onSubmit={handleSubmit}>
-        <label htmlFor="fullName">Full Name:</label>
-        <input
-          type="text"
-          id="fullName"
-          value={fullName}
-          onChange={(e) => setFullName(e.target.value)}
-        />
-        <label htmlFor="email">Email:</label>
-        <input
-          type="email"
-          id="email"
-          value={email}
-          onChange={(e) => setEmail(e.target.value)}
-        />
-        <label htmlFor="password">Password:</label>
-        <input
-          type="password"
-          id="password"
-          value={password}
-          onChange={(e) => setPassword(e.target.value)}
-        />
-        <button type="submit">Register</button>
-      </form>
-      <p>
-        Already have an account? <Link to="/">Login</Link>
-      </p>
+    <div className="register-container" style={{ backgroundImage: `url(${backgroundImage})` }}>
+      <div className="register-form">
+        <h2>Register</h2>
+        <form onSubmit={handleSubmit}>
+          <label htmlFor="fullName">Full Name:</label>
+          <input
+            type="text"
+            id="fullName"
+            value={fullName}
+            onChange={(e) => setFullName(e.target.value)}
+          />
+          <label htmlFor="email">Email:</label>
+          <input
+            type="email"
+            id="email"
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
+          />
+          <label htmlFor="password">Password:</label>
+          <input
+            type="password"
+            id="password"
+            value={password}
+            onChange={(e) => setPassword(e.target.value)}
+          />
+          <button type="submit">Register</button>
+        </form>
+        <p>
+          Already have an account? <Link to="/">Login</Link>
+        </p>
+      </div>
     </div>
   );
 };

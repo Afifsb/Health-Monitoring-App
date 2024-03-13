@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { Container, Row, Col, Button } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 import '../styles/BMI.css';
+import bmiIMG from '../Images/bmi_img.jpg'; 
 
 const BMI = () => {
   const [name, setName] = useState('');
@@ -97,7 +98,7 @@ const BMI = () => {
         const heightInCm = (parseFloat(feet) * 30.48) + (parseFloat(inches) * 2.54);
         return isNaN(heightInCm) ? '' : heightInCm.toString();
       } else {
-        // If the input is a single number, assume it's in feet
+        
         const heightInFeet = parseFloat(height);
         const heightInCm = heightInFeet * 30.48;
         return heightInCm.toString();
@@ -121,7 +122,7 @@ const BMI = () => {
   };
 
   return (
-    <div>
+    <div className="bmi-background" style={{ backgroundImage: `url(${bmiIMG})` }}>
       <Container className="bmi-container">
         <h2 className="bmi-heading">BMI Calculator</h2>
         <div className="bmi-ranges">

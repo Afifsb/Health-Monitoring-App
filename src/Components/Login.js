@@ -1,8 +1,8 @@
-// Login.jsx
 import React, { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import axios from "axios";
-import '../styles/Login.css'
+import '../styles/Login.css';
+import backgroundImage from '../Images/login_img.jpeg'; 
 
 const Login = () => {
   const navigate = useNavigate();
@@ -32,28 +32,30 @@ const Login = () => {
   };
 
   return (
-    <div className="login-container">
-      <h2>Login</h2>
-      <form onSubmit={handleSubmit}>
-        <label htmlFor="email">Email:</label>
-        <input
-          type="email"
-          id="email"
-          value={email}
-          onChange={(e) => setEmail(e.target.value)}
-        />
-        <label htmlFor="password">Password:</label>
-        <input
-          type="password"
-          id="password"
-          value={password}
-          onChange={(e) => setPassword(e.target.value)}
-        />
-        <button type="submit">Login</button>
-      </form>
-      <p>
-        Don't have an account? <Link to="/register">Register</Link>
-      </p>
+    <div className="login-container" style={{ backgroundImage: `url(${backgroundImage})` }}>
+      <div className="login-form">
+        <h2>Login</h2>
+        <form onSubmit={handleSubmit}>
+          <label htmlFor="email">Email:</label>
+          <input
+            type="email"
+            id="email"
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
+          />
+          <label htmlFor="password">Password:</label>
+          <input
+            type="password"
+            id="password"
+            value={password}
+            onChange={(e) => setPassword(e.target.value)}
+          />
+          <button type="submit">Login</button>
+        </form>
+        <p>
+          Don't have an account? <Link to="/register">Register</Link>
+        </p>
+      </div>
     </div>
   );
 };

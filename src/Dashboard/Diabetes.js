@@ -2,6 +2,8 @@ import React, { useState } from 'react';
 import { Container, Row, Col, Button } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 import '../styles/Diabetes.css';
+import diabetesIMG from '../Images/diabetes_img.jpg'; 
+
 
 const Diabetes = () => {
   const [name, setName] = useState('');
@@ -58,7 +60,7 @@ const Diabetes = () => {
   };
 
   return (
-    <div>
+    <div className="bmi-background" style={{ backgroundImage: `url(${diabetesIMG})` }}>
     <Container className="diabetes-container">
       <h2 className="diabetes-heading">Blood Sugar Level Checker</h2>
       <div className="diabetes-ranges">

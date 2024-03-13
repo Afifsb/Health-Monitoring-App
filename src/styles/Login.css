@@ -1,61 +1,69 @@
 .login-container {
-    max-width: 400px;
-    margin: 0 auto;
-    padding: 20px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    background-color: #f9f9f9;
-  }
-  
-  .login-container h2 {
-    margin-bottom: 20px;
-    text-align: center;
-  }
-  
-  .login-container form {
-    display: flex;
-    flex-direction: column;
-  }
-  
-  .login-container form label {
-    font-weight: bold;
-  }
-  
-  .login-container form input[type="email"],
-  .login-container form input[type="password"] {
-    padding: 10px;
-    margin-bottom: 15px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-  }
-  
-  .login-container form button {
-    padding: 10px;
-    border: none;
-    border-radius: 5px;
-    background-color: #007bff;
-    color: #fff;
-    font-size: 16px;
-    cursor: pointer;
-  }
-  
-  .login-container form button:hover {
-    background-color: #0056b3;
-  }
-  
-  .register-link {
-    text-align: center;
-    margin-top: 20px;
-  }
-  
-  .register-link a {
-    color: #007bff;
-    text-decoration: none;
-  }
-  
-  .register-link a:hover {
-    text-decoration: underline;
-  }
-  
-  
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.login-form {
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  background-color: rgba(255, 255, 255, 0.8);
+}
+
+.login-form h2 {
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.login-form form {
+  display: flex;
+  flex-direction: column;
+}
+
+.login-form form label {
+  font-weight: bold;
+}
+
+.login-form form input[type="email"],
+.login-form form input[type="password"] {
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.login-form form button {
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  background-color: #007bff;
+  color: #fff;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.login-form form button:hover {
+  background-color: #0056b3;
+}
+
+.register-link {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.register-link a {
+  color: #007bff;
+  text-decoration: none;
+}
+
+.register-link a:hover {
+  text-decoration: underline;
+}

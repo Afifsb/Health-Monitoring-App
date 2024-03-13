@@ -53,14 +53,14 @@ body, html {
   background-color: #0056b3;
 }
 
-/* Dashboard specific styles */
+
 .dashboard {
   display: flex;
   justify-content: space-between;
 }
 
 .card {
-  flex-basis: 30%; /* Adjust as needed */
+  flex-basis: 30%; 
   padding: 20px;
   margin-bottom: 20px;
   background-color: #f8f9fa;

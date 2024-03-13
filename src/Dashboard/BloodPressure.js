@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { Container, Row, Col, Button } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 import '../styles/BloodPressure.css';
+import bloodPressureIMG from '../Images/bloodpressure_img.jpg'; 
 
 const BloodPressure = () => {
   const [name, setName] = useState('');
@@ -62,7 +63,7 @@ const BloodPressure = () => {
   };
 
   return (
-    <div>
+    <div className="bloodpressure-background" style={{ backgroundImage: `url(${bloodPressureIMG})` }}>
       <Container className="bloodpressure-container">
         <h2 className="bloodpressure-heading">Blood Pressure Checker</h2>
         <div className="bloodpressure-ranges">
