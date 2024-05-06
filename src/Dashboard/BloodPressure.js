@@ -98,7 +98,7 @@ const BloodPressure = () => {
                 <label className="bloodpressure-label">Diastolic Pressure (mmHg):</label>
                 <input className="bloodpressure-input" type="number" value={diastolic} onChange={(e) => setDiastolic(e.target.value)} />
               </div>
-            </Col>
+            </Col> 
           </Row>
           <Button type="submit" className="bloodpressure-button">Check Blood Pressure</Button>
         </form>
