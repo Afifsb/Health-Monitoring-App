@@ -1,19 +1,19 @@
 {
   "files": {
-    "main.css": "/Health-monitoring-App/static/css/main.3ffe7596.css",
-    "main.js": "/Health-monitoring-App/static/js/main.5a232db4.js",
-    "static/js/453.e0e41b50.chunk.js": "/Health-monitoring-App/static/js/453.e0e41b50.chunk.js",
-    "static/media/login_img.jpeg": "/Health-monitoring-App/static/media/login_img.41a6ed8d038eaaf29bbb.jpeg",
-    "static/media/bloodpressure_img.jpg": "/Health-monitoring-App/static/media/bloodpressure_img.6e3fe234484ed39dd059.jpg",
-    "static/media/diabetes_img.jpg": "/Health-monitoring-App/static/media/diabetes_img.bc714dd41e0265b43940.jpg",
-    "static/media/bmi_img.jpg": "/Health-monitoring-App/static/media/bmi_img.69bfef2a89eddca4a3d9.jpg",
-    "index.html": "/Health-monitoring-App/index.html",
-    "main.3ffe7596.css.map": "/Health-monitoring-App/static/css/main.3ffe7596.css.map",
-    "main.5a232db4.js.map": "/Health-monitoring-App/static/js/main.5a232db4.js.map",
-    "453.e0e41b50.chunk.js.map": "/Health-monitoring-App/static/js/453.e0e41b50.chunk.js.map"
+    "main.css": "/Health-Monitoring-App/static/css/main.1a6b1fc0.css",
+    "main.js": "/Health-Monitoring-App/static/js/main.2b8a7d34.js",
+    "static/js/453.e0e41b50.chunk.js": "/Health-Monitoring-App/static/js/453.e0e41b50.chunk.js",
+    "static/media/login_img.jpeg": "/Health-Monitoring-App/static/media/login_img.41a6ed8d038eaaf29bbb.jpeg",
+    "static/media/bloodpressure_img.jpg": "/Health-Monitoring-App/static/media/bloodpressure_img.6e3fe234484ed39dd059.jpg",
+    "static/media/diabetes_img.jpg": "/Health-Monitoring-App/static/media/diabetes_img.bc714dd41e0265b43940.jpg",
+    "static/media/bmi_img.jpg": "/Health-Monitoring-App/static/media/bmi_img.69bfef2a89eddca4a3d9.jpg",
+    "index.html": "/Health-Monitoring-App/index.html",
+    "main.1a6b1fc0.css.map": "/Health-Monitoring-App/static/css/main.1a6b1fc0.css.map",
+    "main.2b8a7d34.js.map": "/Health-Monitoring-App/static/js/main.2b8a7d34.js.map",
+    "453.e0e41b50.chunk.js.map": "/Health-Monitoring-App/static/js/453.e0e41b50.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.3ffe7596.css",
-    "static/js/main.5a232db4.js"
+    "static/css/main.1a6b1fc0.css",
+    "static/js/main.2b8a7d34.js"
   ]
 }
